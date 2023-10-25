@@ -1,4 +1,4 @@
-# XStorage: A Password Storage App
+# XManager: A Password Storage App
 ### Instructor: Prof. Rahat Rafiq
 ### Created for CIS 350 03
 ## Made by:
