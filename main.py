@@ -66,6 +66,7 @@ class App(customtkinter.CTk):
         start.title("XManager")
         start.iconbitmap("logo.ico")
 
+        global frame2
         global username_entry2
         global password_entry2
 
@@ -128,6 +129,9 @@ class App(customtkinter.CTk):
 
     def create_login(self):
 
+        global name_entry1
+        global password_entry3
+
         frame4 = customtkinter.CTkFrame(master=start, width=500, height=400, fg_color="#141414", border_width=3,
                                         border_color="#424242")
         frame4.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
@@ -143,7 +147,7 @@ class App(customtkinter.CTk):
                                                  placeholder_text="Password")
         password_entry3.place(x=120, y=175)
 
-        create_login_button3 = customtkinter.CTkButton(master=frame4, command=start.enter, text="Create", fg_color="#294ec6",
+        create_login_button3 = customtkinter.CTkButton(master=frame4, command=start.create_login_button, text="Create", fg_color="#294ec6",
                                                 hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=150,
                                                 height=30)
         create_login_button3.place(x=180, y=250)
@@ -156,32 +160,30 @@ class App(customtkinter.CTk):
     def logout(self):
         start.login_window()
 
-    def open(self):
-        global add_login_button2
-        dialog = customtkinter.CTkInputDialog(text="Enter name:", title="Username")
+    def create_login_button(self):
         global name
-        name = dialog.get_input()
-        global name1
-        dialog2 = customtkinter.CTkInputDialog(text="Enter password:", title="Password")
-        name1 = dialog2.get_input()
-        add_login_button2 = customtkinter.CTkButton(master=frame3, command=start.login_name, text=name, fg_color="#294ec6",
-                                                   bg_color="#141414", hover_color="#1e3a96", corner_radius=6,
-                                                   cursor="hand2", width=300, height=40)
-        add_login_button2.place(x=100, y=40)
+        global password
+        global storage_button
+        name = name_entry1.get()
+        password = password_entry3.get()
+        storage_button = customtkinter.CTkButton(master=frame3, command=start.show_password, text=name, fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=300,
+                                                height=50)
+        storage_button.place(x=100, y=40)
+        messagebox.showinfo("Success", "Password storage added.")
+        frame3.tkraise()
 
-    def login_name(self):
+    def show_password(self):
         get_password = customtkinter.CTkInputDialog(text="Enter Master Password", title="Master")
-        if get_password.get_input() == start.MASTER_KEY:
-            show_password = customtkinter.CTkInputDialog("")
-            CTkMessagebox(title=name, message=f"Password: {name1}",
+        if get_password.get_input() == start.master_key:
+            CTkMessagebox(title=name, message=f"Password: {password}",
                       icon="check", option_1="Thanks")
         else:
-            CTkMessagebox(title="Invalid", message="Invalid master key", icon="cancel")
+            messagebox.showerror("Error", "Invalid master key.")
 
     def delete_login(self):
         if check_var.get() == "on":
             print("hello")
-            add_login_button2.destroy()
+            storage_button.destroy()
             check_var.set("off")
 
 class Authentication():
@@ -192,7 +194,7 @@ class Authentication():
         if username != "" and password != "":
             cursor.execute("SELECT username FROM users WHERE username=?", [username])
             if cursor.fetchone() is not None:
-                CTkMessagebox(title="Error", message="Username already exists.", icon="cancel")
+                messagebox.showerror("Error", "Username already exists.")
             else:
                 encoded_password = password.encode("utf-8")
                 hashed_password = bcrypt.hashpw(encoded_password, bcrypt.gensalt())
@@ -200,10 +202,8 @@ class Authentication():
                 cursor.execute("INSERT INTO users VALUES (?, ?)", [username, hashed_password])
                 conn.commit()
                 messagebox.showinfo("Success", "Account has been created")
-                #CTkMessagebox(title="Success", message="Account has been created.", icon="check")
         else:
             messagebox.showerror("Error", "Enter all data.")
-            #CTkMessagebox(title="Error", message="Enter all data.", icon="cancel")
 
     def login(self):
         username = username_entry2.get()
@@ -216,13 +216,10 @@ class Authentication():
                     start.enter()
                 else:
                     messagebox.showerror("Error", "Invalid login")
-                    #CTkMessagebox(title="Error", message="Invalid login", icon="cancel")
             else:
                 messagebox.showerror("Error", "Invalid login")
-                #CTkMessagebox(title="Error", message="Invalid login", icon="cancel")
         else:
             messagebox.showerror("Error", "Enter all data.")
-            #CTkMessagebox(title="Error", message="Enter all data.", icon="cancel")
 
         img1 = customtkinter.CTkImage(Image.open("bg5.jpg"), size=(1920, 1080))
         l1 = customtkinter.CTkLabel(master=start, image=img1)
