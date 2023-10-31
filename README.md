@@ -43,3 +43,61 @@ style="width:70%">
 
 </b></figcaption>
 </figure>
+
+# App Example
+
+### Login Window
+
+<figure>
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168596176719859722/image.png?ex=655256ff&is=653fe1ff&hm=34af09f58d69cd637a49ff77d1c0806ffbb4f0864d4c1c0422ec6be7f8949ea7&" alt="Trulli"
+style="width:50%">
+<figcaption align = "center"><b>
+
+</b></figcaption>
+</figure>
+
+### Sign up Window
+
+<figure>
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168610858738384967/image.png?ex=655264ac&is=653fefac&hm=f9394a7ada4fdf28a0465be221bfa986189a482710ba2e473de2bb7d7884cf53&" alt="Trulli"
+style="width:50%">
+<figcaption align = "center"><b>
+
+</b></figcaption>
+</figure>
+
+### Records Window
+
+When logged into your account, all of your records will be shown here.
+
+<figure>
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168944039605833818/image.png?ex=65539af8&is=654125f8&hm=39271cc9a3b17c38f7237f4033b0de43d4267b90cf905abf9dc309cbcfa90fb2&" alt="Trulli"
+style="width:50%">
+<figcaption align = "center"><b>
+
+</b></figcaption>
+</figure>
+
+### Create Record Window
+
+To create a record, you will click on the "+" button on the records window and you will be prompted to create your new record.
+
+<figure>
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168950294739161180/image.png?ex=6553a0cc&is=65412bcc&hm=c70eb15d5ae1eeb1675410f1390cd47ea7f238792f80ea50402d711c64e5b47e&" alt="Trulli"
+style="width:50%">
+<figcaption align = "center"><b>
+
+</b></figcaption>
+</figure>
+
+### Show Record Window
+
+When clicking on a record, you will be shown the password for the record and the option to copy it.
+
+<figure>
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168947277398806671/image.png?ex=65539dfc&is=654128fc&hm=754915b680cd127842a6a759644b368b2d2c134b3675bb2bcf93816e66a7b982&" alt="Trulli"
+style="width:50%">
+<figcaption align = "center"><b>
+
+</b></figcaption>
+</figure>
