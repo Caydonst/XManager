@@ -101,3 +101,35 @@ style="width:50%">
 
 </b></figcaption>
 </figure>
+
+# Sign up and Login
+
+### Creating account.
+
+<figure>
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168960003969912942/image.png?ex=6553a9d7&is=654134d7&hm=d4a0ab79ecc2a1b1b6208026fb5766d2c0723b59d65c5d97deda30253ee221a9&" alt="Trulli"
+style="width:50%">
+<figcaption align = "center"><b>
+
+</b></figcaption>
+</figure>
+
+### Logging in with invalid account.
+
+<figure>
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168960196408782910/image.png?ex=6553aa05&is=65413505&hm=1104dbbd1498b969dba085fea1b5f0dd31a310dd964797498d6857ac2992d289&" alt="Trulli"
+style="width:50%">
+<figcaption align = "center"><b>
+
+</b></figcaption>
+</figure>
+
+### Creating account with username that already exists.
+
+<figure>
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168960588886573186/image.png?ex=6553aa62&is=65413562&hm=2e7dd52aba951ffaf792cf88f7c54b1c65457902d5dc04fca88c6ad7776da43d&" alt="Trulli"
+style="width:50%">
+<figcaption align = "center"><b>
+
+</b></figcaption>
+</figure>
