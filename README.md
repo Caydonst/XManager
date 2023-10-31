@@ -11,7 +11,7 @@ This app works as a password manager that will take a master password and uses e
 
 
 # Introduction
-This app is a password manager app. With the growth of technology over the decades, account hacking is becoming more prevalent. People need to start creating more abstract and unique passwords but these passwords aren’t exactly easy to rememeber. That’s where our password manager app helps out. Once downloaded, the user will be prompted to create an account or login. Once their account is created they will create a master password. This master password will allow them to login and access their passwords. They will have options to create, edit, copy and delete passwords. Every time you log into your account you will be prompted to enter your master password, then you will have access to your passwords.
+This app is a password manager app. With the growth of technology over the decades, account hacking is becoming more prevalent. People need to start creating more abstract and unique passwords but these passwords aren’t exactly easy to rememeber. That’s where our password manager app helps out. Once downloaded, the user will be prompted to create an account or login. Once logged into their account, they will have access to all of their records and they will have the options to create, edit, copy, or delete records. When creating a record, they will be prompted to enter the name of the record and the password that they want to store. Once the record is created they will be able to click on the record from the records window and have the option to copy the password.
 
 # Diagrams
 ### Use Case
