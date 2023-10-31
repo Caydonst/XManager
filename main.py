@@ -94,6 +94,7 @@ class App(customtkinter.CTk):
     # Display frame when log in button is clicked
     def records_window(self):
 
+        global add_login_frame
         global check_var
         check_var = customtkinter.StringVar(value="off")
 
@@ -102,23 +103,34 @@ class App(customtkinter.CTk):
         frame3 = customtkinter.CTkFrame(master=app, width=500, height=400, fg_color="#141414", border_width=3, border_color="#424242", corner_radius=0)
         frame3.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
-        add_button = customtkinter.CTkButton(master=frame3, command=app.create_record_window, text="+", fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=40, height=40)
-        add_button.place(x=440, y=20)
+        frame3_2 = customtkinter.CTkFrame(master=frame3, width=80, height=360, fg_color="#242424", border_color="#424242", corner_radius=5)
+        frame3_2.place(x=400, y=20)
 
-        edit_button = customtkinter.CTkButton(master=frame3, text="Edit", fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=40, height=40)
-        edit_button.place(x=440, y=80)
+        add_button = customtkinter.CTkButton(master=frame3_2, command=app.create_record_window, text="+", fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=40, height=40)
+        add_button.place(x=20, y=20)
 
-        delete_button = customtkinter.CTkButton(master=frame3, command=app.delete_login, text="Delete", fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=40, height=40)
-        delete_button.place(x=435, y=140)
+        edit_button = customtkinter.CTkButton(master=frame3_2, text="Edit", fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=40, height=40)
+        edit_button.place(x=20, y=80)
 
-        add_login_frame = customtkinter.CTkScrollableFrame(master=frame3, width=350, height=340, fg_color="#000000")
-        add_login_frame.place(x=50, y=20)
+        delete_button = customtkinter.CTkButton(master=frame3_2, command=records.delete_login, text="Delete", fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=40, height=40)
+        delete_button.place(x=15, y=140)
 
-        checkbox = customtkinter.CTkCheckBox(master=frame3, text="", bg_color="#000000", border_color="#424242", onvalue="on", offvalue="off", variable=check_var)
-        checkbox.place(x=65, y=47)
+        add_login_frame = customtkinter.CTkScrollableFrame(master=frame3, width=350, height=350, fg_color="#000000")
+        add_login_frame.place(x=20, y=20)
 
-        logout_button = customtkinter.CTkButton(master=frame3, command=app.logout, text="Logout", fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=40, height=40)
-        logout_button.place(x=435, y=330)
+        #checkbox_frame = customtkinter.CTkFrame(master=add_login_frame, fg_color="#000000", width=30, height=1000)
+        #checkbox_frame.place(y=10, x=10)
+
+        #checkbox = customtkinter.CTkCheckBox(master=frame3, text="", bg_color="#000000", border_color="#424242", onvalue="on", offvalue="off", variable=check_var)
+        #checkbox.place(x=65, y=47)
+
+        logout_button = customtkinter.CTkButton(master=frame3_2, command=app.logout, text="Logout", fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=40, height=40)
+        logout_button.place(x=13, y=305)
+
+        for i in range(20):
+            customtkinter.CTkButton(master=add_login_frame, command=app.show_record_window, text="Record", corner_radius=6, cursor="hand2", width=300,
+                                                height=50).pack(pady=10)
+
 
     # Display create record window
     def create_record_window(self):
@@ -130,8 +142,8 @@ class App(customtkinter.CTk):
                                         border_color="#424242", corner_radius=0)
         frame4.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
-        add_login_label = customtkinter.CTkLabel(master=frame4, text="Create Password Storage", font=("Helvetica", 30, "bold"))
-        add_login_label.place(x=70, y=55)
+        add_login_label = customtkinter.CTkLabel(master=frame4, text="Create Record", font=("Helvetica", 30, "bold"))
+        add_login_label.place(x=150, y=55)
 
         name_entry1 = customtkinter.CTkEntry(master=frame4, width=260, height=30, fg_color="#2a2a2a",
                                                  placeholder_text="Storage name")
@@ -141,7 +153,7 @@ class App(customtkinter.CTk):
                                                  placeholder_text="Password")
         password_entry3.place(x=120, y=175)
 
-        create_login_button3 = customtkinter.CTkButton(master=frame4, command=app.create_record_button, text="Create", fg_color="#294ec6",
+        create_login_button3 = customtkinter.CTkButton(master=frame4, command=records.create_record_button, text="Create", fg_color="#294ec6",
                                                 hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=150,
                                                 height=30)
         create_login_button3.place(x=180, y=250)
@@ -155,14 +167,15 @@ class App(customtkinter.CTk):
     def show_record_window(self):
 
         global frame5
+        global show_record_entry1
 
         frame5 = customtkinter.CTkFrame(master=app, width=500, height=400, fg_color="#141414", border_width=3,
                                         border_color="#424242", corner_radius=0)
         frame5.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
-        show_record_label1 = customtkinter.CTkLabel(master=frame5, text=f"{name} Record",
+        show_record_label1 = customtkinter.CTkLabel(master=frame5, text=f"Test Record",
                                                  font=("Helvetica", 30, "bold"))
-        show_record_label1.place(x=140, y=55)
+        show_record_label1.place(x=160, y=55)
 
         show_record_label2 = customtkinter.CTkLabel(master=frame5, text="Password:", font=("Helvetica", 15, "bold"))
         show_record_label2.place(x=25, y=120)
@@ -170,18 +183,19 @@ class App(customtkinter.CTk):
         show_record_entry1 = customtkinter.CTkEntry(master=frame5, width=260, height=30, fg_color="#2a2a2a")
         show_record_entry1.place(x=120, y=120)
 
-        back_button3 = customtkinter.CTkButton(master=frame5, command=app.raise3, text="< Back", font=("Arial", 15),
+        back_button3 = customtkinter.CTkButton(master=frame5, command=records.raise3, text="< Back", font=("Arial", 15),
                                                text_color="#4182d6", fg_color="#141414",
                                                hover_color="#141414", corner_radius=6, cursor="hand2", width=40,
                                                height=30)
         back_button3.place(x=20, y=20)
 
-        copy_button = customtkinter.CTkButton(master=frame5, command=lambda: app.copy(password), text="Copy",
+        copy_button = customtkinter.CTkButton(master=frame5, command=lambda: records.copy(show_record_entry1.get()), text="Copy",
                                               fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6,
                                               cursor="hand2", width=40, height=40)
         copy_button.place(x=400, y=115)
 
-        show_record_entry1.insert(0, password)
+        # Insert password into record
+        show_record_entry1.insert(0, "Test123")
         show_record_entry1.configure(state="disabled")
 
     # Display login window - "logout"
@@ -189,19 +203,23 @@ class App(customtkinter.CTk):
 
         app.login_window()
 
+class Records():
+
     # Creates a record from inputs
     def create_record_button(self):
 
         global name
         global password
-        global storage_button
+        #global storage_button
         name = name_entry1.get()
         password = password_entry3.get()
         # Take name and password entries and create record button to display record info when clicked
-        storage_button = customtkinter.CTkButton(master=frame3, command=app.show_record_window, text=name, fg_color="#294ec6", hover_color="#1e3a96", corner_radius=6, cursor="hand2", width=300,
+        storage_button = customtkinter.CTkButton(master=add_login_frame, command=app.show_record_window, text=name, corner_radius=6, cursor="hand2", width=300,
                                                 height=50)
-        storage_button.place(x=100, y=40)
+        storage_button.pack(pady=10)
         # Show that record has been created
+        text = storage_button["text"]
+        print(text)
         messagebox.showinfo("Success", "Password storage added.")
         frame3.tkraise()
 
@@ -212,19 +230,15 @@ class App(customtkinter.CTk):
     # Deletes specified login
     def delete_login(self):
 
-        # if check_var checkbox is checked
-        if check_var.get() == "on":
-            # Destroy record button
-            storage_button.destroy()
-            # Set checkbox to unchecked
-            check_var.set("off")
+        #code for delete login
+        print()
 
     # Copy record password to clipboard
     def copy(self, password):
         # Clearing the clipboard
         app.clipboard_clear()
         # Copying record password to clipboard
-        app.clipboard_append(password)
+        app.clipboard_append(show_record_entry1.get())
         # Create label to display that password has been copied
         copy_label = customtkinter.CTkLabel(master=frame5, text="Copied!", font=("Helvetica", 12), fg_color="#141414")
         copy_label.place(x=400, y=155)
@@ -278,6 +292,7 @@ class Authentication():
 
 if __name__ == "__main__":
     app = App()
+    records = Records()
     auth = Authentication()
     app.app_properties()
     app.login_window()
