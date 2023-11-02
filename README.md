@@ -71,7 +71,7 @@ style="width:50%">
 When logged into your account, all of your records will be shown here.
 
 <figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168944039605833818/image.png?ex=65539af8&is=654125f8&hm=39271cc9a3b17c38f7237f4033b0de43d4267b90cf905abf9dc309cbcfa90fb2&" alt="Trulli"
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1169689992495378593/image.png?ex=655651b2&is=6543dcb2&hm=575c3b509e4ad1b438408b034e0cebc4d08c66eba799ecbb495aa6d1b179f8c2&" alt="Trulli"
 style="width:50%">
 <figcaption align = "center"><b>
 
@@ -95,7 +95,7 @@ style="width:50%">
 When clicking on a record, you will be shown the password for the record and the option to copy it.
 
 <figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168947277398806671/image.png?ex=65539dfc&is=654128fc&hm=754915b680cd127842a6a759644b368b2d2c134b3675bb2bcf93816e66a7b982&" alt="Trulli"
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1169690123282161705/image.png?ex=655651d1&is=6543dcd1&hm=9f7a98adf55885d99c1623fee04d24122745933495d2dfa7cdad69fdf0e744f6&" alt="Trulli"
 style="width:50%">
 <figcaption align = "center"><b>
 
