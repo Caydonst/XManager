@@ -28,14 +28,16 @@ edit_icon = customtkinter.CTkImage(Image.open("images/edit_icon1.png"), size=(25
 edit_icon2 = customtkinter.CTkImage(Image.open("images/edit_icon2.png"), size=(25, 25))
 add_icon = customtkinter.CTkImage(Image.open("images/add_icon2.png"), size=(35, 35))
 copy_icon = customtkinter.CTkImage(Image.open("images/copy_icon1.png"), size=(25, 25))
-logout_icon = customtkinter.CTkImage(Image.open("images/logout_icon2.png"), size=(30, 30))
+logout_icon = customtkinter.CTkImage(Image.open("images/logout_icon2.png"), size=(25, 25))
 delete_icon = customtkinter.CTkImage(Image.open("images/delete_icon1.png"), size=(25, 25))
+delete_icon1 = customtkinter.CTkImage(Image.open("images/delete_icon2.png"), size=(20, 20))
 logo_icon = customtkinter.CTkImage(Image.open("images/logo.ico"), size=(60, 60))
 profile_icon = customtkinter.CTkImage(Image.open("images/profile_icon1.png"), size=(180, 180))
 back_icon = customtkinter.CTkImage(Image.open("images/back_icon.png"), size=(25, 25))
 lock_icon = customtkinter.CTkImage(Image.open("images/lock_icon2.png"), size=(25, 25))
 key_icon = customtkinter.CTkImage(Image.open("images/key_icon3.png"), size=(40, 40))
 profile_icon2 = customtkinter.CTkImage(Image.open("images/profile_icon6.png"), size=(35, 35))
+profile_icon3 = customtkinter.CTkImage(Image.open("images/profile_icon1.png"), size=(70, 70))
 photo_icon = customtkinter.CTkImage(Image.open("images/photo_icon3.png"), size=(25, 25))
 random_icon = customtkinter.CTkImage(Image.open("images/random_icon3.png"), size=(28, 30))
 user_icon = customtkinter.CTkImage(Image.open("images/user_icon2.png"), size=(25, 25))
@@ -43,6 +45,8 @@ add_user_icon = customtkinter.CTkImage(Image.open("images/add_user_icon4.png"), 
 user_icon2 = customtkinter.CTkImage(Image.open("images/user_icon4.png"), size=(80, 80))
 enter_icon = customtkinter.CTkImage(Image.open("images/enter_icon.png"), size=(25, 25))
 save_icon = customtkinter.CTkImage(Image.open("images/save_icon.png"), size=(25, 25))
+username_icon = customtkinter.CTkImage(Image.open("images/username_icon.png"), size=(25, 25))
+password_icon = customtkinter.CTkImage(Image.open("images/lock_icon3.png"), size=(25, 25))
 
 
 
@@ -112,13 +116,6 @@ class App(customtkinter.CTk):
                                                 height=80, bg_color="#141414")
         signup_button.grid(row=0, column=0, columnspan=2, sticky="sew")
 
-        #horizontal_divider_frame = customtkinter.CTkFrame(master=welcome_frame4, width=50, height=2, fg_color="#424242", corner_radius=0)
-        #horizontal_divider_frame.place(relx=0.8, rely=0.5, anchor=tkinter.CENTER)
-
-        #horizontal_divider_frame2 = customtkinter.CTkFrame(master=welcome_frame4, width=500, height=2, fg_color="#424242",
-        #                                                  corner_radius=0)
-        #horizontal_divider_frame2.place(relx=0.2, rely=0.95, anchor=tkinter.CENTER)
-
         vertical_divider_frame = customtkinter.CTkFrame(master=welcome_frame3, width=2, height=300, fg_color="#424242",
                                                corner_radius=0)
         vertical_divider_frame.place(relx=0.05, rely=0.5, anchor=tkinter.CENTER)
@@ -126,9 +123,6 @@ class App(customtkinter.CTk):
         vertical_divider_frame2 = customtkinter.CTkFrame(master=welcome_frame3, width=2, height=300, fg_color="#424242",
                                                         corner_radius=0)
         vertical_divider_frame2.place(relx=0.95, rely=0.5, anchor=tkinter.CENTER)
-
-        #or_label = customtkinter.CTkLabel(master=welcome_frame4, text="or", font=("Helvetica", 20, "bold"), text_color="#424242")
-        #or_label.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
         add_user_button = customtkinter.CTkButton(master=accounts_frame, text="add")
         add_user_button.configure(command=app.signup_window, corner_radius=0, cursor="hand2",
@@ -205,20 +199,27 @@ class App(customtkinter.CTk):
         random_password_button = customtkinter.CTkButton(master=signup_frame2, command=lambda: profile.generate_random_password(signup_frame2), text="",
                                               fg_color="#141414",
                                               hover_color="#242424", corner_radius=6, cursor="hand2", width=40,
-                                              height=45, image=random_icon)
-        random_password_button.place(relx=0.244, rely=0.65, anchor=tkinter.CENTER)
+                                              height=40, image=random_icon)
+        random_password_button.place(relx=0.758, rely=0.65, anchor=tkinter.CENTER)
 
-        copy_button = customtkinter.CTkButton(master=signup_frame2, command=lambda: profile.copy_password(signup_frame), text="",
-                                              fg_color="#141414",
-                                              hover_color="#242424", corner_radius=6, cursor="hand2", width=40,
-                                              height=40, image=copy_icon)
-        copy_button.place(relx=0.758, rely=0.65, anchor=tkinter.CENTER)
+        #copy_button = customtkinter.CTkButton(master=signup_frame2, command=lambda: profile.copy_password(signup_frame), text="",
+        #                                      fg_color="#141414",
+        #                                      hover_color="#242424", corner_radius=6, cursor="hand2", width=40,
+        #                                      height=40, image=copy_icon)
+        #copy_button.place(relx=0.758, rely=0.65, anchor=tkinter.CENTER)
 
         left_divider_frame = customtkinter.CTkFrame(master=signup_frame, width=2, height=300, fg_color="#424242", corner_radius=0)
         left_divider_frame.place(relx=0.2, rely=0.5, anchor=tkinter.CENTER)
 
         right_divider_frame = customtkinter.CTkFrame(master=signup_frame, width=2, height=300, fg_color="#424242", corner_radius=0)
         right_divider_frame.place(relx=0.8, rely=0.5, anchor=tkinter.CENTER)
+
+        signup_username_icon = customtkinter.CTkLabel(master=signup_frame2, fg_color="#141414", text="", image=username_icon)
+        signup_username_icon.place(relx=0.23, rely=0.52)
+
+        signup_password_icon = customtkinter.CTkLabel(master=signup_frame2, fg_color="#141414", text="",
+                                                      image=password_icon)
+        signup_password_icon.place(relx=0.23, rely=0.62)
 
 
     # Display log in window
@@ -228,6 +229,8 @@ class App(customtkinter.CTk):
         global login_password_entry
         global button_name
         global button_name4
+
+        # get name of account button you clicked on welcome_window
         button_name = b.cget("text")
 
         login_frame = customtkinter.CTkFrame(master=app, width=600, height=520, fg_color="#141414", corner_radius=0)
@@ -238,21 +241,24 @@ class App(customtkinter.CTk):
                                                corner_radius=0)
         login_frame2.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
+
+        # if user set profile icon, use that
         try:
 
+            # selecting profile icon
             cursor.execute("SELECT profile_icon FROM users WHERE username=?", [button_name])
             result5 = cursor.fetchone()
+            # opening that image
             profile_img_icon = customtkinter.CTkImage(Image.open(result5[0]), size=(150, 150))
+            #setting image as profile icon in app
             l3 = customtkinter.CTkLabel(master=login_frame2, text="", image=profile_img_icon)
             l3.place(relx=0.5, rely=0.2, anchor=tkinter.CENTER)
 
+        # else: use default profile icon
         except:
 
             l3 = customtkinter.CTkLabel(master=login_frame2, text="", image=profile_icon)
             l3.place(relx=0.5, rely=0.2, anchor=tkinter.CENTER)
-
-        #l3 = customtkinter.CTkLabel(master=login_frame2, text="", image=profile_icon)
-        #l3.place(relx=0.5, rely=0.2, anchor=tkinter.CENTER)
 
         login_label = customtkinter.CTkLabel(master=login_frame2, text=button_name, font=("Helvetica", 30, "bold"))
         login_label.place(relx=0.5, rely=0.45, anchor=tkinter.CENTER)
@@ -280,6 +286,10 @@ class App(customtkinter.CTk):
 
         right_divider_frame = customtkinter.CTkFrame(master=login_frame, width=2, height=300, fg_color="#424242", corner_radius=0)
         right_divider_frame.place(relx=0.8, rely=0.5, anchor=tkinter.CENTER)
+
+        login_password_icon = customtkinter.CTkLabel(master=login_frame2, fg_color="#141414", text="",
+                                                      image=password_icon)
+        login_password_icon.place(relx=0.17, rely=0.54)
 
         button_name4 = button.cget("text")
 
@@ -309,10 +319,10 @@ class App(customtkinter.CTk):
 
         except:
 
-            icon_label = customtkinter.CTkLabel(master=sidebar_frame, text="", image=logo_icon, bg_color="#242424")
-            icon_label.grid(row=1, column=0, pady=10, sticky="n")
+            icon_label = customtkinter.CTkLabel(master=sidebar_frame, text="", image=profile_icon3, bg_color="#242424")
+            icon_label.grid(row=1, column=0, pady=5, sticky="n")
 
-        bar_label = customtkinter.CTkFrame(master=sidebar_frame, fg_color="#424242", width=60, height=3)
+        bar_label = customtkinter.CTkFrame(master=sidebar_frame, fg_color="#424242", width=60, height=2)
         bar_label.grid(row=2, column=0, sticky="n")
 
         add_button = customtkinter.CTkButton(master=sidebar_frame, command=app.create_record_window, text="", fg_color="#242424", hover_color="#424242", corner_radius=0, cursor="hand2", width=80, height=80, image=add_icon)
@@ -326,10 +336,6 @@ class App(customtkinter.CTk):
 
         add_login_frame = customtkinter.CTkScrollableFrame(master=app, width=480, height=480, fg_color="#0A0A0A", corner_radius=0)
         add_login_frame.grid(row=0, column=1, columnspan=2, sticky="nesw")
-
-        logout_button = customtkinter.CTkButton(master=sidebar_frame, command=app.welcome_window, text="", fg_color="#242424", hover_color="#424242", corner_radius=0, cursor="hand2", width=80, height=80, image=logout_icon)
-        logout_button.grid(row=6, column=0, sticky="s")
-
 
         # Creating lists to store record names
         button_names = []
@@ -452,19 +458,12 @@ class App(customtkinter.CTk):
                                                 cursor="hand2", width=494, height=60, image=delete_icon)
         delete_button.place(relx=0.5, rely=0.92, anchor=tkinter.CENTER)
 
-        # Inserting password into the password entry box
-        record_username_entry.configure(state="normal")
+        # inserting username into the password entry box
         record_username_entry.insert(0, x[0])
         record_username_entry.configure(state="disabled")
-        record_password_entry.configure(state="normal")
+        # inserting password into the password entry box
         record_password_entry.insert(0, y[0])
         record_password_entry.configure(state="disabled")
-
-
-    # Display welcome window - "logout"
-    def logout(self):
-
-        app.welcome_window()
 
 
 class Records():
@@ -552,38 +551,38 @@ class Records():
     def edit_record(self, x, y):
 
 
-        edit_frame = customtkinter.CTkFrame(master=show_record_frame, width=350, height=250, fg_color="#141414", border_width=3, corner_radius=0, border_color="#424242")
-        edit_frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+        #edit_frame = customtkinter.CTkFrame(master=show_record_frame, width=350, height=250, fg_color="#141414", border_width=3, corner_radius=0, border_color="#424242")
+        #edit_frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
-        back_button = customtkinter.CTkButton(master=edit_frame, command=edit_frame.destroy, text="",
-                                              fg_color="#141414",
-                                              hover_color="#242424", corner_radius=6, cursor="hand2", width=40,
-                                              height=40, image=back_icon)
-        back_button.place(x=20, y=20)
+        #back_button = customtkinter.CTkButton(master=edit_frame, command=edit_frame.destroy, text="",
+        #                                      fg_color="#141414",
+        #                                      hover_color="#242424", corner_radius=6, cursor="hand2", width=40,
+        #                                      height=40, image=back_icon)
+        #back_button.place(x=20, y=20)
 
-        edit_record_entry1 = customtkinter.CTkEntry(master=edit_frame, width=200, height=30,
-                                                       fg_color="#2a2a2a", placeholder_text="Username")
-        edit_record_entry1.place(relx=0.5, rely=0.4, anchor=tkinter.CENTER)
+        #edit_record_entry1 = customtkinter.CTkEntry(master=edit_frame, width=240, height=30,
+        #                                               fg_color="#2a2a2a", placeholder_text="Username")
+        #edit_record_entry1.place(relx=0.55, rely=0.4, anchor=tkinter.CENTER)
 
-        edit_record_entry2 = customtkinter.CTkEntry(master=edit_frame, width=200, height=30,
-                                                       fg_color="#2a2a2a", placeholder_text="Password")
-        edit_record_entry2.place(relx=0.5, rely=0.6, anchor=tkinter.CENTER)
+        #edit_record_entry2 = customtkinter.CTkEntry(master=edit_frame, width=240, height=30,
+        #                                               fg_color="#2a2a2a", placeholder_text="Password")
+        #edit_record_entry2.place(relx=0.55, rely=0.6, anchor=tkinter.CENTER)
 
-        edit_record_label = customtkinter.CTkLabel(master=edit_frame, text=f"Edit",
-                                                   font=("Helvetica", 30, "bold"))
-        edit_record_label.place(relx=0.5, rely=0.17, anchor=tkinter.CENTER)
+        #edit_record_label = customtkinter.CTkLabel(master=edit_frame, text="Edit",
+        #                                           font=("Helvetica", 30, "bold"))
+        #edit_record_label.place(relx=0.45, rely=0.17, anchor=tkinter.CENTER)
 
-        edit_record_label2 = customtkinter.CTkLabel(master=edit_frame, text="",
-                                                   font=("Helvetica", 30, "bold"), image=edit_icon2)
-        edit_record_label2.place(relx=0.65, rely=0.17, anchor=tkinter.CENTER)
+        #edit_record_label2 = customtkinter.CTkLabel(master=edit_frame, text="",
+        #                                           font=("Helvetica", 30, "bold"), image=edit_icon2)
+        #edit_record_label2.place(relx=0.6, rely=0.17, anchor=tkinter.CENTER)
 
-        show_record_label2 = customtkinter.CTkLabel(master=edit_frame, text="New:",
-                                                    font=("Helvetica", 15, "bold"))
-        show_record_label2.place(relx=0.1, rely=0.4, anchor=tkinter.CENTER)
+        #show_record_label2 = customtkinter.CTkLabel(master=edit_frame, text="New:",
+        #                                            font=("Helvetica", 15, "bold"))
+        #show_record_label2.place(relx=0.12, rely=0.4, anchor=tkinter.CENTER)
 
-        show_record_label2 = customtkinter.CTkLabel(master=edit_frame, text="New:",
-                                                    font=("Helvetica", 15, "bold"))
-        show_record_label2.place(relx=0.1, rely=0.6, anchor=tkinter.CENTER)
+        #show_record_label2 = customtkinter.CTkLabel(master=edit_frame, text="New:",
+        #                                            font=("Helvetica", 15, "bold"))
+        #show_record_label2.place(relx=0.12, rely=0.6, anchor=tkinter.CENTER)
 
         global save_button
         # Setting password entrybox to normal so that you can edit it. It was disabled before so that you couldn't edit it.
@@ -591,38 +590,40 @@ class Records():
         y.configure(state="normal")
         # Once edit button is clicked it creates a new button called "save", click the save button and it will save the changes. aka, make the entry -
         # box disabled again and updating the record in database
-        save_button = customtkinter.CTkButton(master=edit_frame, command=lambda: records.save(x, y, edit_frame, edit_record_entry1, edit_record_entry2), text="",
-                                                fg_color="#141414", hover_color="#242424", corner_radius=0,
-                                                cursor="hand2", width=344, height=60, image=save_icon)
-        save_button.place(relx=0.5, rely=0.87, anchor=tkinter.CENTER)
+        save_button = customtkinter.CTkButton(master=show_record_frame, command=lambda: records.save(x, y), text="",
+                                                fg_color="#141414", hover_color="#242424", corner_radius=6,
+                                                cursor="hand2", width=40, height=40, image=save_icon)
+        save_button.place(x=435, y=20)
 
 
-    def save(self, x, y, z, a, b):
+    def save(self, x, y):
 
         # Get the new edited username and password
         username2 = x.get()
         password2 = y.get()
-        new_username = a.get()
-        new_password = b.get()
+        #new_username = a.get()
+        #new_password = b.get()
         print(f"old username: {username2}")
         print(f"old password: {password2}")
-        print(f"new password: {new_username}")
-        print(f"new password: {new_password}")
-        x.delete(0, len(username2))
-        y.delete(0, len(password2))
-        x.insert(0, new_username)
-        y.insert(0, new_password)
+        #print(f"new password: {new_username}")
+        #print(f"new password: {new_password}")
+        #if new_username != "" and new_password != "":
+        #    x.delete(0, len(username2))
+        #    y.delete(0, len(password2))
+        #    x.insert(0, new_username)
+        #    y.insert(0, new_password)
         print(button_name2)
         # Set the entrybox to disabled again, so you can't edit it
         x.configure(state="disabled")
         y.configure(state="disabled")
         # Update that username and password in the database to resemble the new edited username and password
-        cursor.execute(f"UPDATE {username} SET username=?, password=? WHERE name=?", [new_username, new_password, button_name2])
+        cursor.execute(f"UPDATE {username} SET username=?, password=? WHERE name=?", [username2, password2, button_name2])
         conn.commit()
-        #save_button.destroy()
-        z.destroy()
-
+        save_button.destroy()
         messagebox.showinfo("Saved", "Changes saved.")
+
+        #else:
+        #    messagebox.showerror("Error", "Enter all data.")
 
     def copy_username(self, x):
 
@@ -716,6 +717,7 @@ class Profile():
     def profile_window(self):
 
         global profile_img_icon
+        global logout_button
 
         #img_icon2 = customtkinter.CTkImage(Image.open("images/profileimg.png"), size=(25, 25))
 
@@ -750,10 +752,10 @@ class Profile():
                                               height=40, image=back_icon)
         back_button.place(x=20, y=20)
 
-        delete_button = customtkinter.CTkButton(master=app, command=auth.delete_account, text="",
-                                                fg_color="#141414", hover_color="#242424", corner_radius=0,
-                                                cursor="hand2", width=494, height=60, image=delete_icon)
-        delete_button.grid(row=0, column=0, columnspan=2, sticky="sew")
+        delete_button = customtkinter.CTkButton(master=app, command=profile.profile_authentication, text="",
+                                                fg_color="#141414", hover_color="#242424", corner_radius=6, bg_color="#141414",
+                                                cursor="hand2", width=40, height=40, image=delete_icon)
+        delete_button.place(relx=0.5, rely=0.75, anchor=tkinter.CENTER)
 
         profile_username_label = customtkinter.CTkLabel(master=profile_frame, text="Username:",
                                                     font=("Helvetica", 15, "bold"))
@@ -773,8 +775,12 @@ class Profile():
 
         edit_button = customtkinter.CTkButton(master=app, text="",
                                               fg_color="#141414", hover_color="#242424", bg_color="#141414",
-                                              corner_radius=6, cursor="hand2", width=40, height=40, image=edit_icon2)
+                                              corner_radius=6, cursor="hand2", width=40, height=40, image=edit_icon)
         edit_button.grid(row=0, column=1, pady=20, padx=20, sticky="ne")
+
+        logout_button = customtkinter.CTkButton(master=app, command=lambda: profile.logout_verify(profile_window_frame, profile_frame, delete_button), fg_color="#141414", hover_color="#242424", corner_radius=0, text="",
+                                                cursor="hand2", height=60, width=494, image=logout_icon)
+        logout_button.grid(row=0, column=0, columnspan=2, sticky="sew")
 
         cursor.execute(f"SELECT username FROM users WHERE username=?", [username])
         profile_username = cursor.fetchone()
@@ -809,21 +815,75 @@ class Profile():
 
         signup_password_entry.insert(0, password)
 
-        signup_copy_label = customtkinter.CTkLabel(master=x, text="Make sure to copy the password!", font=("Arial", 12), fg_color="#141414", text_color="#BF4541")
+        signup_copy_label = customtkinter.CTkLabel(master=x, text="Make sure to save the password!", font=("Arial", 12), fg_color="#141414", text_color="#BF4541")
         signup_copy_label.place(relx=0.43, rely=0.71, anchor=tkinter.CENTER)
 
 
     def copy_password(self, x):
 
-            copy_password = signup_password_entry.get()
-            # Clearing the clipboard
-            app.clipboard_clear()
-            # Copying record password to clipboard
-            app.clipboard_append(copy_password)
-            # Create label to display that password has been copied
-            copy_label = customtkinter.CTkLabel(master=x, text="Copied!", font=("Helvetica", 12),
-                                                fg_color="#141414")
-            copy_label.place(relx=0.758, rely=0.7, anchor=tkinter.CENTER)
+        copy_password = signup_password_entry.get()
+        # Clearing the clipboard
+        app.clipboard_clear()
+        # Copying record password to clipboard
+        app.clipboard_append(copy_password)
+        # Create label to display that password has been copied
+        copy_label = customtkinter.CTkLabel(master=x, text="Copied!", font=("Helvetica", 12),
+                                            fg_color="#141414")
+        copy_label.place(relx=0.758, rely=0.7, anchor=tkinter.CENTER)
+
+    def profile_authentication(self):
+
+        authentication_frame = customtkinter.CTkFrame(master=app, width=400, height=200, fg_color="#242424", bg_color="#141414", corner_radius=30)
+        authentication_frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+        authentication_entry1 = customtkinter.CTkEntry(master=authentication_frame, width=260, height=30, fg_color="#323232", placeholder_text="Password", show="*")
+        authentication_entry1.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+        key_button = customtkinter.CTkLabel(master=authentication_frame, text="", image=key_icon)
+        key_button.place(relx=0.10, rely=0.5, anchor=tkinter.CENTER)
+
+        show_record_label = customtkinter.CTkLabel(master=authentication_frame, text=f"Enter Password:",
+                                                   font=("Helvetica", 20, "bold"))
+        show_record_label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
+
+        auth_button = customtkinter.CTkButton(master=authentication_frame, command=lambda: profile.delete_acc_verify(authentication_entry1), text="",
+                                               fg_color="#294ec6", hover_color="#242424", corner_radius=30,
+                                               cursor="hand2", width=160, height=40, border_width=3,
+                                               border_color="#294ec6", image=delete_icon1)
+        auth_button.place(relx=0.5, rely=0.77, anchor=tkinter.CENTER)
+
+        back_button = customtkinter.CTkButton(master=authentication_frame, command=authentication_frame.destroy, text="",
+                                              fg_color="#242424",
+                                              hover_color="#424242", corner_radius=6, cursor="hand2", width=40,
+                                              height=40, image=back_icon)
+        back_button.place(x=20, y=20)
+
+
+    def delete_acc_verify(self, x):
+
+        if x.get() == password:
+            auth.delete_account()
+        else:
+            messagebox.showerror("Error", "Incorrect password.")
+
+    def logout_verify(self, x, y, z):
+
+        logout_frame = customtkinter.CTkFrame(master=x, width=250, height=150, fg_color="#242424", corner_radius=0)
+        logout_frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
+
+        logout_label = customtkinter.CTkLabel(master=logout_frame, text="Logout?", font=("Helvetica", 16))
+        logout_label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
+
+        yes_button = customtkinter.CTkButton(master=logout_frame, command=auth.logout, width=60, height=50, bg_color="#242424", text="Yes", corner_radius=10, cursor="hand2")
+        yes_button.place(relx=0.25, rely=0.7, anchor=tkinter.CENTER)
+
+        no_button = customtkinter.CTkButton(master=logout_frame, command=lambda: profile.logout_no(logout_frame), width=60, height=50, bg_color="#242424", text="No", corner_radius=10, cursor="hand2")
+        no_button.place(relx=0.75, rely=0.7, anchor=tkinter.CENTER)
+
+    def logout_no(self, x):
+
+        x.destroy()
+
 
 class Authentication():
 
@@ -902,6 +962,10 @@ class Authentication():
         cursor.execute(f"DROP TABLE {username}")
         conn.commit()
         messagebox.showinfo("Success", "Account deleted.")
+        app.welcome_window()
+
+    # Display welcome window - "logout"
+    def logout(self):
         app.welcome_window()
 
 
