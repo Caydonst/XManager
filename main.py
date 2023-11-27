@@ -550,40 +550,6 @@ class Records():
     # Editing username and password in record
     def edit_record(self, x, y):
 
-
-        #edit_frame = customtkinter.CTkFrame(master=show_record_frame, width=350, height=250, fg_color="#141414", border_width=3, corner_radius=0, border_color="#424242")
-        #edit_frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
-
-        #back_button = customtkinter.CTkButton(master=edit_frame, command=edit_frame.destroy, text="",
-        #                                      fg_color="#141414",
-        #                                      hover_color="#242424", corner_radius=6, cursor="hand2", width=40,
-        #                                      height=40, image=back_icon)
-        #back_button.place(x=20, y=20)
-
-        #edit_record_entry1 = customtkinter.CTkEntry(master=edit_frame, width=240, height=30,
-        #                                               fg_color="#2a2a2a", placeholder_text="Username")
-        #edit_record_entry1.place(relx=0.55, rely=0.4, anchor=tkinter.CENTER)
-
-        #edit_record_entry2 = customtkinter.CTkEntry(master=edit_frame, width=240, height=30,
-        #                                               fg_color="#2a2a2a", placeholder_text="Password")
-        #edit_record_entry2.place(relx=0.55, rely=0.6, anchor=tkinter.CENTER)
-
-        #edit_record_label = customtkinter.CTkLabel(master=edit_frame, text="Edit",
-        #                                           font=("Helvetica", 30, "bold"))
-        #edit_record_label.place(relx=0.45, rely=0.17, anchor=tkinter.CENTER)
-
-        #edit_record_label2 = customtkinter.CTkLabel(master=edit_frame, text="",
-        #                                           font=("Helvetica", 30, "bold"), image=edit_icon2)
-        #edit_record_label2.place(relx=0.6, rely=0.17, anchor=tkinter.CENTER)
-
-        #show_record_label2 = customtkinter.CTkLabel(master=edit_frame, text="New:",
-        #                                            font=("Helvetica", 15, "bold"))
-        #show_record_label2.place(relx=0.12, rely=0.4, anchor=tkinter.CENTER)
-
-        #show_record_label2 = customtkinter.CTkLabel(master=edit_frame, text="New:",
-        #                                            font=("Helvetica", 15, "bold"))
-        #show_record_label2.place(relx=0.12, rely=0.6, anchor=tkinter.CENTER)
-
         global save_button
         # Setting password entrybox to normal so that you can edit it. It was disabled before so that you couldn't edit it.
         x.configure(state="normal")
@@ -601,17 +567,8 @@ class Records():
         # Get the new edited username and password
         username2 = x.get()
         password2 = y.get()
-        #new_username = a.get()
-        #new_password = b.get()
         print(f"old username: {username2}")
         print(f"old password: {password2}")
-        #print(f"new password: {new_username}")
-        #print(f"new password: {new_password}")
-        #if new_username != "" and new_password != "":
-        #    x.delete(0, len(username2))
-        #    y.delete(0, len(password2))
-        #    x.insert(0, new_username)
-        #    y.insert(0, new_password)
         print(button_name2)
         # Set the entrybox to disabled again, so you can't edit it
         x.configure(state="disabled")
@@ -622,8 +579,6 @@ class Records():
         save_button.destroy()
         messagebox.showinfo("Saved", "Changes saved.")
 
-        #else:
-        #    messagebox.showerror("Error", "Enter all data.")
 
     def copy_username(self, x):
 
@@ -639,6 +594,7 @@ class Records():
 
     # Copy record password to clipboard
     def copy_password(self, x):
+
         copy_password = x.get()
         # Clearing the clipboard
         app.clipboard_clear()
@@ -659,6 +615,7 @@ class Records():
         show_record_frame.destroy()
 
     def destroy3(self):
+
         create_record_frame.destroy()
 
 
@@ -677,8 +634,6 @@ class Profile():
             name2 = os.path.basename(file.name)
             print(name)
             print(name2)
-
-            #print(directory)
             print(name)
             # convert to RGB
             img = Image.open(f"{name}").convert("RGB")
@@ -697,11 +652,16 @@ class Profile():
             # save the resulting image
             Image.fromarray(arrImg).save(f"profile_images/{name2}")
 
+            # open the new cropped image
             saved_img = f"profile_images/{name2}"
 
+            # open the new saved image
             test_img = Image.open(saved_img)
+            # apply antialiasing to the image
             img_resize = test_img.resize((180, 180), Image.Resampling.LANCZOS)
+            # save the image
             img_resize.save(saved_img)
+            # open the saved image
             img_icon = customtkinter.CTkImage(Image.open(saved_img), size=(180, 180))
 
 
@@ -712,14 +672,11 @@ class Profile():
             l4 = customtkinter.CTkLabel(master=y, text="", image=img_icon, corner_radius=100)
             l4.place(relx=0.5, rely=0.25, anchor=tkinter.CENTER)
 
-        #y.configure(image=img_icon)
 
     def profile_window(self):
 
         global profile_img_icon
         global logout_button
-
-        #img_icon2 = customtkinter.CTkImage(Image.open("images/profileimg.png"), size=(25, 25))
 
         profile_window_frame = customtkinter.CTkFrame(master=app, width=600, height=520, fg_color="#141414", corner_radius=0)
         profile_window_frame.grid(row=0, column=0, columnspan=2, sticky="nesw")
@@ -728,7 +685,7 @@ class Profile():
         profile_frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
         try:
-
+            # open profile image if there is one
             cursor.execute("SELECT profile_icon FROM users WHERE username=?", [username])
             result = cursor.fetchone()
             profile_img_icon = customtkinter.CTkImage(Image.open(result[0]), size=(180, 180))
@@ -736,7 +693,7 @@ class Profile():
             l3.place(relx=0.5, rely=0.25, anchor=tkinter.CENTER)
 
         except:
-
+            # else: open default profile image
             profile_img_icon1 = customtkinter.CTkImage(Image.open("images/profile_icon1.png"), size=(220, 220))
             l3 = customtkinter.CTkLabel(master=profile_frame, text="", image=profile_img_icon1)
             l3.place(relx=0.5, rely=0.25, anchor=tkinter.CENTER)
@@ -866,7 +823,7 @@ class Profile():
         else:
             messagebox.showerror("Error", "Incorrect password.")
 
-    def logout_verify(self, x, y, z):
+    def logout_verify(self, x):
 
         logout_frame = customtkinter.CTkFrame(master=x, width=250, height=150, fg_color="#242424", corner_radius=0)
         logout_frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
@@ -949,6 +906,7 @@ class Authentication():
             messagebox.showerror("Error", "Enter password.")
 
     def verify(self, x, y, z):
+
         print(button_name)
         if authentication_entry.get() == password:
             app.show_record_window(x, y, z)
@@ -956,6 +914,7 @@ class Authentication():
             messagebox.showerror("Error", "Incorrect password.")
 
     def delete_account(self):
+
         print(button_name4)
         cursor.execute("DELETE FROM users where username=?", [button_name4])
         conn.commit()
@@ -966,6 +925,7 @@ class Authentication():
 
     # Display welcome window - "logout"
     def logout(self):
+
         app.welcome_window()
 
 
