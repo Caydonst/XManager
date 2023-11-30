@@ -44,92 +44,114 @@ style="width:70%">
 </b></figcaption>
 </figure>
 
-# App Example
+# User Guide
 
-### Login Window
+## Home window
 
 <figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168596176719859722/image.png?ex=655256ff&is=653fe1ff&hm=34af09f58d69cd637a49ff77d1c0806ffbb4f0864d4c1c0422ec6be7f8949ea7&" alt="Trulli"
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1178714493384130670/image.png?ex=6577266a&is=6564b16a&hm=aa5d64d366648127773c96244dfd052e822e2e5beeed372d9881ccf95f1a12c9&" alt="Trulli"
 style="width:50%">
 <figcaption align = "center"><b>
 
 </b></figcaption>
 </figure>
 
-### Sign up Window
+## Registration
+
+User is requirement to create an account when using the app. The username may only contain letters and numbers. The passwords needs to be at least 8 characters in length, and must contain at least 1 letter, number and special character. If some requirements are not met, the app will display a pop-up to show what requirements still need to be met.
+
+<p align="center>
+
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178769433225875587/image.png?ex=65775995&is=6564e495&hm=6e44145e6d9c6e0a621bc272509fb5d198031fb9c77bf1d239208bc1a004bd29&" alt="Trulli"
+  style="width:45%"> 
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179609344594153502/cac31cb0ad900953858438e88f076bae.png?ex=657a67cf&is=6567f2cf&hm=e4cf238d9bc0b5df036b6b4b1afba43e2a1144a97c71976a05ed67d74beb8099&" alt="Trulli"
+  style="width:45%"> 
+
+</p>
+
+## Home window with user account
+
+When an account has been successfully created, it will navigate the user back to the home window and the user may select the account to log in.
 
 <figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168610858738384967/image.png?ex=655264ac&is=653fefac&hm=f9394a7ada4fdf28a0465be221bfa986189a482710ba2e473de2bb7d7884cf53&" alt="Trulli"
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1178752884800761957/image.png?ex=65774a2b&is=6564d52b&hm=021bd9df228927f8821760b65bd3bc6a4fd19ce3be730947e5294cd4df750730&" alt="Trulli"
 style="width:50%">
 <figcaption align = "center"><b>
 
 </b></figcaption>
 </figure>
 
-### Records Window
+## Log in
 
-When logged into your account, all of your records will be shown here.
+When logging into an account the user is required to input the password to log in. There is a toggle button next to the text box that allows the user to show or hide the password.
+
+<p align="center">
+  
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178753345289211996/image.png?ex=65774a99&is=6564d599&hm=d54e9e36cb982852c237b92e93d6ef28afa94fff6867d863af6368013dd878a5&" alt="Trulli"
+  style="width:45%">
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178753426222497822/image.png?ex=65774aac&is=6564d5ac&hm=9455c7c4437207c7159909fdfc5fb42b23dc3766814edb73ada33436ea963c2e&" alt="Trulli"
+  style="width:45%">
+
+</p>
+
+## Records
+
+When the user logs in they will be navigated to the records window. If the user has no records, that window will be emtpy.
 
 <figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1169689992495378593/image.png?ex=655651b2&is=6543dcb2&hm=575c3b509e4ad1b438408b034e0cebc4d08c66eba799ecbb495aa6d1b179f8c2&" alt="Trulli"
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1178753572930859028/image.png?ex=65774acf&is=6564d5cf&hm=323fa3d00cce8da145cbb202d3fdd0442eb8e4d71b1cd442ca258c15d8c20fea&" alt="Trulli"
 style="width:50%">
 <figcaption align = "center"><b>
 
 </b></figcaption>
 </figure>
 
-### Create Record Window
+## Creating a record
 
-To create a record, you will click on the "+" button on the records window and you will be prompted to create your new record.
+When the user clicks the add button, a window pops up allowing the user to input the record information. Each record must have a title to display what the record is. The username and passwords fields are the account information you are storing. For example, if the user wants to store an email record, they will input the email and email password into the username and password fields respectively.
+
+<p align="center">
+  
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178764563559219260/image.png?ex=6577550c&is=6564e00c&hm=c9a6c8750fa3816226bcdaefab5818b4116b5b5f210dde74b26c7f1fa7205ea3&" alt="Trulli"
+  style="width:45%">
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178765173411037265/image.png?ex=6577559d&is=6564e09d&hm=1922878a7982373681776531380a2f9b2c26d9e5c50634ab0dc636915327ab44&" alt="Trulli"
+  style="width:45%">
+
+</p>
+
+## Accessing a record
+
+When a record is successfuly created, it will be displayed at the top of the screen. When the user clicks on a record, they will be required to type in their account password to get access to the record information.
+
+<p align="center">
+  
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178753818339586078/image.png?ex=65774b0a&is=6564d60a&hm=0d01271f434db071ab71298dad5510cd6046faafffc0a0693e7a03e7c84fbdec&" alt="Trulli"
+  style="width:45%">
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178767612193296455/image.png?ex=657757e3&is=6564e2e3&hm=f379a1744799735ded7c0541bcb9a1ab838419de0d6b9a335036e6531dfe475d&" alt="Trulli"
+  style="width:45%">
+
+</p>
+
+When the user inputs their account password, the record information will be displayed for them to copy, edit, or delete.
 
 <figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168950294739161180/image.png?ex=6553a0cc&is=65412bcc&hm=c70eb15d5ae1eeb1675410f1390cd47ea7f238792f80ea50402d711c64e5b47e&" alt="Trulli"
+<img src="https://cdn.discordapp.com/attachments/486014885080334367/1178767794213507183/image.png?ex=6577580e&is=6564e30e&hm=8825af72e60ddec8f6bd122ba0c5c6125032366344a550970e483fa9efc4d5b2&" alt="Trulli"
 style="width:50%">
 <figcaption align = "center"><b>
+
+## Profile
+
+When the user clicks on the profile icon, the profile window will be displayed. The user may set a profile picture, logout, or delete their account.
 
 </b></figcaption>
 </figure>
 
-### Show Record Window
+<p align="center">
+  
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178759407165788220/image.png?ex=6577503e&is=6564db3e&hm=0f06580306b22e5e1e25dc268439d3dda003ef409e2d60b8991167f05d64877e&" alt="Trulli"
+  style="width:45%">
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179082646777778246/image.png?ex=65787d49&is=65660849&hm=49e2419015565878702e9dd49fd9aa51a4f01522480c62929e79b53489de5df4&" alt="Trulli"
+  style="width:45%">
 
-When clicking on a record, you will be shown the password for the record and the option to copy it.
+</p>
 
-<figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1169690123282161705/image.png?ex=655651d1&is=6543dcd1&hm=9f7a98adf55885d99c1623fee04d24122745933495d2dfa7cdad69fdf0e744f6&" alt="Trulli"
-style="width:50%">
-<figcaption align = "center"><b>
-
-</b></figcaption>
-</figure>
-
-# Sign up and Login
-
-### Creating account.
-
-<figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168960003969912942/image.png?ex=6553a9d7&is=654134d7&hm=d4a0ab79ecc2a1b1b6208026fb5766d2c0723b59d65c5d97deda30253ee221a9&" alt="Trulli"
-style="width:50%">
-<figcaption align = "center"><b>
-
-</b></figcaption>
-</figure>
-
-### Logging in with invalid account.
-
-<figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168960196408782910/image.png?ex=6553aa05&is=65413505&hm=1104dbbd1498b969dba085fea1b5f0dd31a310dd964797498d6857ac2992d289&" alt="Trulli"
-style="width:50%">
-<figcaption align = "center"><b>
-
-</b></figcaption>
-</figure>
-
-### Creating account with username that already exists.
-
-<figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1168960588886573186/image.png?ex=6553aa62&is=65413562&hm=2e7dd52aba951ffaf792cf88f7c54b1c65457902d5dc04fca88c6ad7776da43d&" alt="Trulli"
-style="width:50%">
-<figcaption align = "center"><b>
-
-</b></figcaption>
-</figure>
