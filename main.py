@@ -29,8 +29,8 @@ edit_icon = customtkinter.CTkImage(Image.open("images/edit_icon1.png"), size=(25
 add_icon = customtkinter.CTkImage(Image.open("images/add_icon2.png"), size=(35, 35))
 copy_icon = customtkinter.CTkImage(Image.open("images/copy_icon1.png"), size=(25, 25))
 logout_icon = customtkinter.CTkImage(Image.open("images/logout_icon2.png"), size=(25, 25))
-delete_icon = customtkinter.CTkImage(Image.open("images/delete_icon1.png"), size=(25, 25))
-delete_icon1 = customtkinter.CTkImage(Image.open("images/delete_icon1.png"), size=(20, 20))
+delete_icon = customtkinter.CTkImage(Image.open("images/delete_icon2.png"), size=(25, 25))
+delete_icon1 = customtkinter.CTkImage(Image.open("images/delete_icon2.png"), size=(20, 20))
 logo_icon = customtkinter.CTkImage(Image.open("images/logo.ico"), size=(60, 60))
 profile_icon = customtkinter.CTkImage(Image.open("images/profile_icon1.png"), size=(180, 180))
 back_icon = customtkinter.CTkImage(Image.open("images/back_icon.png"), size=(25, 25))
@@ -388,7 +388,7 @@ class App(customtkinter.CTk):
         global record_password_entry
         global create_record_frame
 
-        create_record_frame = customtkinter.CTkFrame(master=app, width=400, height=300, fg_color="#141414", bg_color="#0A0A0A", corner_radius=30)
+        create_record_frame = customtkinter.CTkFrame(master=app, width=400, height=300, fg_color="#141414", bg_color="#0A0A0A", corner_radius=30, border_width=3, border_color="#424242")
         create_record_frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
         add_login_label = customtkinter.CTkLabel(master=create_record_frame, text="Create Record", font=("Helvetica", 30, "bold"))
@@ -664,9 +664,9 @@ class Profile():
             # add alpha channel to the image
             arrImg = np.dstack((arrImg, arAlpha))
             # save the resulting image
-            Image.fromarray(arrImg).save(f"profile_images/{name2}")
+            Image.fromarray(arrImg).save(f"images/{name2}")
 
-            saved_img = f"profile_images/{name2}"
+            saved_img = f"images/{name2}"
 
             test_img = Image.open(saved_img)
             img_resize = test_img.resize((180, 180), Image.Resampling.LANCZOS)
@@ -747,7 +747,7 @@ class Profile():
                                               corner_radius=6, cursor="hand2", width=40, height=40, image=edit_icon)
         edit_button.grid(row=0, column=1, pady=20, padx=20, sticky="ne")
 
-        logout_button = customtkinter.CTkButton(master=app, command=lambda: profile.logout_verify(profile_window_frame, profile_frame, delete_button), fg_color="#141414", hover_color="#242424", corner_radius=0, text="",
+        logout_button = customtkinter.CTkButton(master=app, command=lambda: profile.logout_verify(profile_window_frame), fg_color="#141414", hover_color="#242424", corner_radius=0, text="",
                                                 cursor="hand2", height=60, width=494, image=logout_icon)
         logout_button.grid(row=0, column=0, columnspan=2, sticky="sew")
 
@@ -816,15 +816,19 @@ class Profile():
         authentication_frame = customtkinter.CTkFrame(master=app, width=400, height=200, fg_color="#181818", bg_color="#141414", corner_radius=30, border_width=3, border_color="#424242")
         authentication_frame.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
-        authentication_entry1 = customtkinter.CTkEntry(master=authentication_frame, width=260, height=30, fg_color="#2a2a2a", placeholder_text="Password", show="*")
+        authentication_entry1 = customtkinter.CTkEntry(master=authentication_frame, width=260, height=30, fg_color="#2a2a2a", placeholder_text="Password *", show="*")
         authentication_entry1.place(relx=0.5, rely=0.5, anchor=tkinter.CENTER)
 
         key_button = customtkinter.CTkLabel(master=authentication_frame, text="", image=key_icon)
         key_button.place(relx=0.10, rely=0.5, anchor=tkinter.CENTER)
 
+        show_record_label = customtkinter.CTkLabel(master=authentication_frame, text=f"Delete account?",
+                                                   font=("Helvetica", 26, "bold"), text_color="#FF4949")
+        show_record_label.place(relx=0.5, rely=0.17, anchor=tkinter.CENTER)
+
         show_record_label = customtkinter.CTkLabel(master=authentication_frame, text=f"Enter Password:",
-                                                   font=("Helvetica", 20, "bold"))
-        show_record_label.place(relx=0.5, rely=0.3, anchor=tkinter.CENTER)
+                                                   font=("Helvetica", 16, "bold"))
+        show_record_label.place(relx=0.34, rely=0.35, anchor=tkinter.CENTER)
 
         auth_button = customtkinter.CTkButton(master=authentication_frame, command=lambda: profile.delete_acc_verify(authentication_entry1), text="",
                                                fg_color="#181818", hover_color="#424242", corner_radius=30,
