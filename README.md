@@ -60,7 +60,7 @@ style="width:50%">
 
 User is requirement to create an account when using the app. The username may only contain letters and numbers. The passwords needs to be at least 8 characters in length, and must contain at least 1 letter, number and special character. If some requirements are not met, the app will display a pop-up to show what requirements still need to be met.
 
-<p align="center>
+<p align="center">
 
   <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178769433225875587/image.png?ex=65775995&is=6564e495&hm=6e44145e6d9c6e0a621bc272509fb5d198031fb9c77bf1d239208bc1a004bd29&" alt="Trulli"
   style="width:45%"> 
