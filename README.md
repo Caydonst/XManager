@@ -112,9 +112,9 @@ When the user clicks the add button, a window pops up allowing the user to input
 
 <p align="center">
   
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178764563559219260/image.png?ex=6577550c&is=6564e00c&hm=c9a6c8750fa3816226bcdaefab5818b4116b5b5f210dde74b26c7f1fa7205ea3&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179648011299725434/b22fb5835afc8d34f90d6319bfdd4a08.png?ex=657a8bd2&is=656816d2&hm=a9e9b6180f3535ef4dfb9dbef7855386bf5077dce8c7d0f1e773d9fd743d0375&" alt="Trulli"
   style="width:45%">
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178765173411037265/image.png?ex=6577559d&is=6564e09d&hm=1922878a7982373681776531380a2f9b2c26d9e5c50634ab0dc636915327ab44&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179648358399348776/796d95b05b567b64af0e6cbeeda708ee.png?ex=657a8c25&is=65681725&hm=769c9044d078ac0a768c4a1898762ead2d73d07b18b2c09679596db3a8df882f&" alt="Trulli"
   style="width:45%">
 
 </p>
@@ -127,7 +127,7 @@ When a record is successfuly created, it will be displayed at the top of the scr
   
   <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178753818339586078/image.png?ex=65774b0a&is=6564d60a&hm=0d01271f434db071ab71298dad5510cd6046faafffc0a0693e7a03e7c84fbdec&" alt="Trulli"
   style="width:45%">
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178767612193296455/image.png?ex=657757e3&is=6564e2e3&hm=f379a1744799735ded7c0541bcb9a1ab838419de0d6b9a335036e6531dfe475d&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179648807324110868/4fb6e8dc8958ec2ed0c939c5e2114262.png?ex=657a8c90&is=65681790&hm=8fe341a8928ac7589c078dc38b16a587cc9267387dc5ecb5bfe5bea76e40df3a&" alt="Trulli"
   style="width:45%">
 
 </p>
@@ -148,10 +148,13 @@ When the user clicks on the profile icon, the profile window will be displayed. 
 
 <p align="center">
   
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178759407165788220/image.png?ex=6577503e&is=6564db3e&hm=0f06580306b22e5e1e25dc268439d3dda003ef409e2d60b8991167f05d64877e&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179651899637649408/3c91553e365ebfaf71a155621a9f87c2.png?ex=657a8f71&is=65681a71&hm=ca24b543952241edf103cdbe3adef22df132024b6debf2070417a8ac31fa85d1&" alt="Trulli"
   style="width:45%">
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179082646777778246/image.png?ex=65787d49&is=65660849&hm=49e2419015565878702e9dd49fd9aa51a4f01522480c62929e79b53489de5df4&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179651932399353906/7658fe6dcfa2eb0f486cd1cfa008cd62.png?ex=657a8f79&is=65681a79&hm=c265bf057bed2fd14822238ede447447cd1a80db3389766051794393f84955e9&" alt="Trulli"
   style="width:45%">
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179651961218416710/47cad2a27c4599205fa9fa7b6253f32b.png?ex=657a8f80&is=65681a80&hm=872118adebd7a2e5844b47f5726c7c936ae0dbca7560e6bd6962822d9e9fa4e0&" alt="Trulli"
+  style="width:45%">
+  
 
 </p>
 
