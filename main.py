@@ -588,26 +588,15 @@ class Records():
                                               height=40, image=back_icon)
         back_button.place(x=20, y=20)
 
-        # Setting password entrybox to normal so that you can edit it. It was disabled before so that you couldn't edit it.
-        x.configure(state="normal")
-        y.configure(state="normal")
-
-        # Once edit button is clicked it creates a new button called "save", click the save button and it will save the changes. aka, make the entry -
-        # box disabled again and updating the record in database
-        #save_button = customtkinter.CTkButton(master=show_record_frame, command=lambda: records.save(x, y), text="",
-        #                                        fg_color="#141414", hover_color="#242424", corner_radius=6,
-        #                                        cursor="hand2", width=40, height=40, image=save_icon)
-        #save_button.place(x=435, y=20)
-
 
     def save(self, x, y, a, b):
 
-        # Get the new edited username and password
+        # get the new edited username and password
         username2 = x.get()
         password2 = y.get()
         new_username = a.get()
         new_password = b.get()
-
+        # encrypt new username and password
         encrypted_user2 = rsa.encrypt((new_username.encode()), publicKey)
         encrypted_pass2 = rsa.encrypt((new_password.encode()), publicKey)
 
@@ -616,25 +605,26 @@ class Records():
         print(f"new username: {encrypted_user2}")
         print(f"new password: {encrypted_pass2}")
         print(button_name2)
-        # Setting password entrybox to normal so that you can edit it. It was disabled before so that you couldn't edit it.
+        # setting password entrybox to normal so that you can edit it. It was disabled before so that you couldn't edit it.
         x.configure(state="normal")
         y.configure(state="normal")
 
-        # Update that username and password in the database to resemble the new edited username and password
+        # update that username and password in the database to resemble the new edited username and password
         cursor.execute(f"UPDATE {username} SET username=?, password=? WHERE name=?", [encrypted_user2, encrypted_pass2, button_name2])
         conn.commit()
 
+        # get new username and password from database
         cursor.execute(f"SELECT username FROM {username} WHERE name=?", [button_name2])
         result = cursor.fetchone()
         cursor.execute(f"SELECT password FROM {username} WHERE name=?", [button_name2])
         result2 = cursor.fetchone()
+        # insert new username and password into entryboxes
         x.insert(0, result[0])
         y.insert(0, result2[0])
-        # Set the entrybox to disabled again, so you can't edit it
+        # set the entrybox to disabled again, so you can't edit it
         x.configure(state="disabled")
         y.configure(state="disabled")
         records.destroy1()
-        #save_button.destroy()
         messagebox.showinfo("Saved", "Changes saved.")
 
     def copy_username(self, x):
@@ -664,7 +654,6 @@ class Records():
     def destroy1(self):
 
         edit_frame.destroy()
-
 
     def destroy2(self):
 
