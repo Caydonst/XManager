@@ -58,13 +58,13 @@ style="width:50%">
 
 ## Registration
 
-User is requirement to create an account when using the app. The username may only contain letters and numbers. The passwords needs to be at least 8 characters in length, and must contain at least 1 letter, number and special character. If some requirements are not met, the app will display a pop-up to show what requirements still need to be met.
+User is requirement to create an account when using the app. The username may only contain letters and numbers. The passwords needs to be at least 8 characters in length, and must contain at least 1 lowercase letter, uppercase letter, number and special character. If some requirements are not met, the app will display a pop-up to show what requirements still need to be met.
 
 <p align="center">
 
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178769433225875587/image.png?ex=65775995&is=6564e495&hm=6e44145e6d9c6e0a621bc272509fb5d198031fb9c77bf1d239208bc1a004bd29&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1182770445959823390/image.png?ex=6585e7d1&is=657372d1&hm=bf55e699d1c4a81d1a4245084792464457307fa3f06022ac419f8c5db26dba46&" alt="Trulli"
   style="width:45%"> 
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179609344594153502/cac31cb0ad900953858438e88f076bae.png?ex=657a67cf&is=6567f2cf&hm=e4cf238d9bc0b5df036b6b4b1afba43e2a1144a97c71976a05ed67d74beb8099&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1182770669835014236/image.png?ex=6585e806&is=65737306&hm=c73673cde979dee9925ca5cdfb36001849d960e57565961decb291f48653dc5a&" alt="Trulli"
   style="width:45%"> 
 
 </p>
@@ -121,23 +121,16 @@ When the user clicks the add button, a window pops up allowing the user to input
 
 ## Accessing a record
 
-When a record is successfuly created, it will be displayed at the top of the screen. When the user clicks on a record, they will be required to type in their account password to get access to the record information.
+When a record is successfuly created, it will be displayed at the top of the screen. When the user clicks on a record, it will display the encrypted record information. When the user clicks on either of the copy buttons, it will copy either the username or password respectively. It will decrypt the ciphertext and add the plaintext to your clipboard so that you can paste it where needed.
 
 <p align="center">
   
   <img src="https://cdn.discordapp.com/attachments/486014885080334367/1178753818339586078/image.png?ex=65774b0a&is=6564d60a&hm=0d01271f434db071ab71298dad5510cd6046faafffc0a0693e7a03e7c84fbdec&" alt="Trulli"
   style="width:45%">
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179648807324110868/4fb6e8dc8958ec2ed0c939c5e2114262.png?ex=657a8c90&is=65681790&hm=8fe341a8928ac7589c078dc38b16a587cc9267387dc5ecb5bfe5bea76e40df3a&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1182775372559949894/image.png?ex=6585ec67&is=65737767&hm=6a7bfb06207968e0585378a43622aa2f8fb6f3f144ce90b7988dd37fdebe661f&" alt="Trulli"
   style="width:45%">
 
 </p>
-
-When the user inputs their account password, the record information will be displayed for them to copy, edit, or delete.
-
-<figure>
-<img src="https://cdn.discordapp.com/attachments/486014885080334367/1178767794213507183/image.png?ex=6577580e&is=6564e30e&hm=8825af72e60ddec8f6bd122ba0c5c6125032366344a550970e483fa9efc4d5b2&" alt="Trulli"
-style="width:50%">
-<figcaption align = "center"><b>
 
 ## Profile
 
@@ -148,11 +141,11 @@ When the user clicks on the profile icon, the profile window will be displayed. 
 
 <p align="center">
   
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179651899637649408/3c91553e365ebfaf71a155621a9f87c2.png?ex=657a8f71&is=65681a71&hm=ca24b543952241edf103cdbe3adef22df132024b6debf2070417a8ac31fa85d1&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1182771238129635408/image.png?ex=6585e88d&is=6573738d&hm=389405bb1f347e6930dc98123542b96b7a1ac8e7d76202f7f2666a75b722993a&" alt="Trulli"
   style="width:45%">
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179651932399353906/7658fe6dcfa2eb0f486cd1cfa008cd62.png?ex=657a8f79&is=65681a79&hm=c265bf057bed2fd14822238ede447447cd1a80db3389766051794393f84955e9&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1182771142872809562/image.png?ex=6585e877&is=65737377&hm=f4ce00048d44445b0f3ae70d046c1c9e49912cbd975df5de3dba5631b0c157d6&" alt="Trulli"
   style="width:45%">
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1179651961218416710/47cad2a27c4599205fa9fa7b6253f32b.png?ex=657a8f80&is=65681a80&hm=872118adebd7a2e5844b47f5726c7c936ae0dbca7560e6bd6962822d9e9fa4e0&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1182770940111749220/image.png?ex=6585e846&is=65737346&hm=e234fe0272cd52c422a3182df7a4570fe285e667e9d3a1af04a56947937b8cf0&" alt="Trulli"
   style="width:45%">
   
 
