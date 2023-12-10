@@ -16,6 +16,8 @@ This app is a password manager app. With the growth of technology over the decad
 # Diagrams
 ## Use Case
 
+This is the use case of the XManager app. It presents all of the features of the app that you can use. For authentication you can create an account and login. For records you can create records, edit records, and delete records. For profile you can logout and delete account.
+
 <p align="center">
   
   <img src="https://cdn.discordapp.com/attachments/486014885080334367/1183540544543137933/image.png?ex=6588b506&is=65764006&hm=c84fb6fcf29c0c155cbdb5fb77f614bf6a3ef09006df2cc17fdb4f9a2f5c9d61&" alt="Trulli"
