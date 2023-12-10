@@ -18,7 +18,7 @@ This app is a password manager app. With the growth of technology over the decad
 
 <p align="center">
   
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1159534457338998804/image.png?ex=65315f9d&is=651eea9d&hm=fd49eac7cbe4fba7f6ed3185e82a1020e66b7dd816fe514abe57ac40d5e495a2&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1183540544543137933/image.png?ex=6588b506&is=65764006&hm=c84fb6fcf29c0c155cbdb5fb77f614bf6a3ef09006df2cc17fdb4f9a2f5c9d61&" alt="Trulli"
     style="width:40%">
     
 </p>
