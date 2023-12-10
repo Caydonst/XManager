@@ -7,8 +7,9 @@
 ### Mathew Lindahl
 
 # Abstract
-This app works as a password manager that will take a master password and uses encryption to protect and store your passwords for other apps or websites that you can use. This was an exploration into how encryption would look and work as well as a test of our coding skills.
-
+Everyone has passwords. E-Mail, Discord, Bank account, you name it. In turn, its also very easy to lose track of your passwords. XManager helps with that. XManager is a simple, easy to use password storage app that helps you to 
+remember all of your passwords for your favorite applications. It even has some helpful encryption to keep out pesky thiefs who try to steal your passwords. XManager also has access to multiple account creation, so you, your family, your
+friends, or even just other users can store passwords on the same device.
 
 # Introduction
 This app is a password manager app. With the growth of technology over the decades, account hacking is becoming more prevalent. People need to start creating more abstract and unique passwords but these passwords aren’t exactly easy to rememeber. That’s where our password manager app helps out. Once downloaded, the user will be prompted to create an account or login. Once logged into their account, they will have access to all of their records and they will have the options to create, edit, copy, or delete records. When creating a record, they will be prompted to enter the name of the record and the password that they want to store. Once the record is created they will be able to click on the record from the records window and have the option to copy the password.
