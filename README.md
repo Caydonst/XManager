@@ -37,9 +37,11 @@ style="width:50%">
 
 ## Class
 
+In the class diagram we have 4 classes: App, Records, Profile, and Authentication. App class handles most of the UI. Records class handles all of the record functions such as create record, edit record, and delete record. Profile class handles all of the functions in the profile window, such as the logout and delete account functions. Lastly, the Authentication class handles all authentication, such as account creation, login, and account deletion verification.
+
 <p align="center">
   
-  <img src="https://cdn.discordapp.com/attachments/1147261091508932728/1159542198233202738/image.png?ex=653166d3&is=651ef1d3&hm=7849b6dad71e3888a375d55eee50b53929518c309ea31ff9ffd993de6177cd18&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/1147261091508932728/1183623810218467439/image.png?ex=65890293&is=65768d93&hm=03382672b56cf024646017d6cc743080fd7903f39efe6b5424d75b03b80d86c9&" alt="Trulli"
 style="width:70%">
 
 </p>
