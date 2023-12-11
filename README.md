@@ -39,7 +39,7 @@ style="width:50%">
 
 <p align="center">
   
-  <img src="https://cdn.discordapp.com/attachments/1147261091508932728/1159542198233202738/image.png?ex=653166d3&is=651ef1d3&hm=7849b6dad71e3888a375d55eee50b53929518c309ea31ff9ffd993de6177cd18&" alt="Trulli"
+  <img src="https://github.com/Caydonst/XManager/assets/152524444/95d6b20a-11af-47fe-a5ca-cb00cb870fbf" alt="Trulli"
 style="width:70%">
 
 </p>
