@@ -28,9 +28,11 @@ This is the use case of the XManager app. It presents all of the features of the
 
 ## Sequence
 
+This is a sequence diagram for account creation. The user gives their username and password. The program checks the database for identical usernames and checks if the password meets the requirements. If both meet the requirements, the account is created. Both the username and password have requirements on what they can be. The username may not be the same as another user and may only contain letters and numbers. The password can be identical to another user, but it must be at least 8 characters in length and contain at least 1 lowercase letter, uppercase letter, number, and special character. If these conditions are not met for both the username and password, they will not be accepted.
+
 <p align="center">
   
-  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1159313205026357268/image.png?ex=6530918f&is=651e1c8f&hm=89601473fb0065837f4b49c21eba22853c68522e13d2af6effa7ebf9034aa1b7&" alt="Trulli"
+  <img src="https://cdn.discordapp.com/attachments/486014885080334367/1183779994716082207/image.png?ex=65899408&is=65771f08&hm=fe2127874f0071dac26e0c303c0d747cd410086e66544a99b4fb3c63c52d9dcc&" alt="Trulli"
 style="width:50%">
 
 </p>
